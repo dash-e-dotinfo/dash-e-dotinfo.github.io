@@ -4,13 +4,15 @@ let rowCount;
 let currentCells = [];
 let nextCells = [];
 
+let symmetry = 2;
+
 function setup() {
   // Set simulation framerate to 10 to avoid flickering
   frameRate(10);
-  createCanvas(720, 400);
+  createCanvas(1000, 500);
 
   // Calculate columns and rows
-  columnCount = floor(width / cellSize);
+  columnCount = floor((width / 2) / cellSize);
   rowCount = floor(height / cellSize);
 
   // Set each column in current cells to an empty array
@@ -24,17 +26,20 @@ function setup() {
   for (let column = 0; column < columnCount; column++) {
     nextCells[column] = [];
   }
-  
+
   randomizeBoard();
   loop();
 
   describe(
-    "Grid of squares that switch between white and black, demonstrating a simulation of John Conway's Game of Life. When clicked, the simulation resets."
+    "Grid of squares that switch between white and black, demonstrating a simulation of John Conway's Game of Life."
   );
 }
 
 function draw() {
   generate();
+
+
+
   for (let column = 0; column < columnCount; column++) {
     for (let row = 0; row < rowCount; row++) {
       // Get cell value (0 or 1)
@@ -42,13 +47,14 @@ function draw() {
 
       // Convert cell value to get black (0) for alive or white (255 (white) for dead
       colorMode(RGB, 255)
-      if(cell == 1) {
-        fill(0, 0, 255);
+      if (cell == 1) {
+        fill(150, 255, 0);
       } else {
         fill(0);
       }
-      stroke(119, 179, 0);
+      stroke(0);
       rect(column * cellSize, row * cellSize, cellSize, cellSize);
+      rect(width - column * cellSize, row * cellSize, cellSize, cellSize);
     }
   }
 }
@@ -58,7 +64,7 @@ function randomizeBoard() {
   for (let column = 0; column < columnCount; column++) {
     for (let row = 0; row < rowCount; row++) {
       // Randomly select value of either 0 (dead) or 1 (alive)
-      currentCells[column][row] = Math.random() > 0.3;
+      currentCells[column][row] = Math.random() > 0.5;
     }
   }
 }
