@@ -1,4 +1,4 @@
-let cellSize = 10;
+let cellSize = 7;
 let columnCount;
 let rowCount;
 let currentCells = [];
@@ -8,8 +8,8 @@ let symmetry = 2;
 
 function setup() {
   // Set simulation framerate to 10 to avoid flickering
-  frameRate(10);
-  createCanvas(1000, 500);
+  frameRate(2);
+  createCanvas(750, 1000);
 
   // Calculate columns and rows
   columnCount = floor((width / 2) / cellSize);
@@ -53,6 +53,7 @@ function draw() {
         fill(0);
       }
       stroke(0);
+      strokeWeight (4);
       rect(column * cellSize, row * cellSize, cellSize, cellSize);
       rect(width - column * cellSize, row * cellSize, cellSize, cellSize);
     }
