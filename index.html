@@ -1,150 +1,148 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 
     <style>
-        body {
-            background: black;
-            color: #ffffff;
+      body {
+        background: black;
+        color: #ffffff;
 
-            font-family: helvetica;
-            /*font-family: mono;*/
-            letter-spacing: .05rem;
-            font-size: 1rem;
-            word-break: normal;
-            text-align: left;
-        }
+        font-family: helvetica;
+        letter-spacing: 0.05rem;
+        font-size: 1rem;
+        word-break: normal;
+        text-align: left;
+        overflow: hidden;
+      }
 
-        section {
-            float: left;
-            width: 300px;
-            height: auto;
-        }
+      section {
+        float: left;
+        width: 300px;
+        height: auto;
 
-        a:link {
-  color: rgb(0, 145, 255);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: rgb(255, 217, 0);
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: rgb(0, 255, 13);
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
+        margin: 1rem;
+      }
+
+      a:link {
+        color: rgb(0, 145, 255);
+        background-color: transparent;
+        text-decoration: none;
+      }
+      a:visited {
+        color: rgb(255, 217, 0);
+        background-color: transparent;
+        text-decoration: none;
+      }
+      a:hover {
+        color: rgb(0, 255, 13);
+        background-color: transparent;
+        text-decoration: underline;
+      }
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      mark {
+        background-color: #96ff00;
+        color: black;
+      }
+
+      h1,
+      h3 {
+        color: white;
+        background-color: black;
+      }
+
+      p {
+        color: white;
+        background-color: black;
+
+        margin: 0;
+        width: max-content;
+      }
+
+      canvas {
+        position: absolute;
+        z-index: -1;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <style>
-        mark {
-            background-color: #96ff00;
-            color: black;
-        }
-
-        h1 {
-            color: white;
-
-        }
-
-        p {
-            color: white;
-
-
-        }
-    </style>
-<Section>
-        <h1> Dasha </h1>
-        <h3> <i> crhunchy video and sound </i> </h3>
-       <p style="font-size: 14px;"> 
-        painters tape
-        <br>
-        field mic 
-        <br>
-        through the vanishing point
-        <br>
-        preserved flowers
-        <br>
-        milkytracker
-        <br>
-        <a href="https://www.instagram.com/cane.yo/?hl=en">oil painting</a>
-        <br>
-        <a href="https://bijijoo.com/">brain damage</a>
-        <br>
-        hand painted and circuit bent
-        <br>
-        seminar to contemporary ethics
-        <br>
-        seminar: dying democracies
-        <br>
-        seminar: 19th century continental
-        <br>
-        google drive
-        <br>
-        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">game of life</a>
-        <br>
-        cathode ray tube
-        <br>
-        analogic oscillation
-        <br>
-        lowpass
-        <br>
-        rollercoaster tycoon
-        <br>
-        conspicously huming 
-        <br>
-        refrigerator
-        <br>
-        chartwell a4 student graph pad
-        <br>
-        <a href="https://www.instagram.com/p/C02zXRsJQRi/?hl=en&img_index=2">reusable bag</a>
-        <br>
-        tattoo
-        <br>
-        pattern
-        <br>
-        <a href="https://en.wikipedia.org/wiki/Carrington_Event">deadly starlight</a>
-        <br>
-        pen collection
-        <br>
+  <body>
+    <section>
+      <h1>Dasha</h1>
+      <h3><i>crhunchy video and sound</i></h3>
+      <p>painters tape</p>
+      <p>field mic</p>
+      <p>through the vanishing point</p>
+      <p>preserved flowers</p>
+      <p>milkytracker</p>
+      <p><a href="https://www.instagram.com/cane.yo/?hl=en">oil painting</a></p>
+      <p><a href="https://bijijoo.com/">brain damage</a></p>
+      <p>hand painted and circuit bent</p>
+      <p>seminar to contemporary ethics</p>
+      <p>seminar: dying democracies</p>
+      <p>seminar: 19th century continental</p>
+      <p>google drive</p>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+          >game of life</a
+        >
+      </p>
+      <p>cathode ray tube</p>
+      <p>analogic oscillation</p>
+      <p>lowpass</p>
+      <p>rollercoaster tycoon</p>
+      <p>conspicously huming</p>
+      <p>refrigerator</p>
+      <p>chartwell a4 student graph pad</p>
+      <p>
+        <a href="https://www.instagram.com/p/C02zXRsJQRi/?hl=en&img_index=2"
+          >reusable bag</a
+        >
+      </p>
+      <p>tattoo pattern</p>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Carrington_Event"
+          >deadly starlight</a
+        >
+      </p>
+      <p>pen collection</p>
+      <p>
         <a href="https://oimo.io/works/life/">cosmos</a>
-        <br>
-        aldo leopold
-        <br>
+      </p>
+      <p>aldo leopold</p>
+      <p>
         <a href="https://www.benjaminbjorklund.com/">dog photo</a>
-        <br>
-        silver camera
-        <br>
+      </p>
+      <p>silver camera</p>
+      <p>
         <a href="http://www.instagram.com/da_jojin_da/?hl=en">darning socks</a>
-        <br>
-        wool nylon blend thread </p>
-        <p style="font-size: 14px;"> E-Mail: <i>mcdashstegg</i> [at] <i>gmail</i> [dot] <i>com</i>
-            <br>
-            <br>
-            Upcoming: Pique - Fall Edition
-        </p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p> Do not forget to find music today.</p>
-    </Section>
-</body>
+      </p>
+      <p>wool nylon blend thread</p>
+      <br />
+      <p style="font-size: 14px">
+        E-Mail: <i>mcdashstegg</i> [at] <i>gmail</i> [dot] <i>com</i>
+        <br />
+        <br />
+        Upcoming: Pique - Fall Edition
+      </p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <p>Do not forget to find music today.</p>
+    </section>
+  </body>
 
-<script src="./life.js"></script>
-
+  <script src="./life.js"></script>
 </html>
