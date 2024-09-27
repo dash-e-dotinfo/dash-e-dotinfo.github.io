@@ -13,14 +13,10 @@
         font-size: 1rem;
         word-break: normal;
         text-align: left;
-        overflow: hidden;
+        overflow: auto;
       }
 
-      section {
-        float: left;
-        width: 300px;
-        height: auto;
-
+      #content {
         margin: 1rem;
       }
 
@@ -54,6 +50,7 @@
       h3 {
         color: white;
         background-color: black;
+        width: max-content;
       }
 
       p {
@@ -65,17 +62,19 @@
       }
 
       canvas {
-        position: absolute;
+        position: fixed;
         z-index: -1;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        overflow: hidden;
+        pointer-events: none;
       }
     </style>
   </head>
 
   <body>
-    <section>
+    <div id="content">
       <h1>Dasha</h1>
       <h3><i>crhunchy video and sound</i></h3>
       <p>painters tape</p>
@@ -141,7 +140,7 @@
       <br />
       <br />
       <p>Do not forget to find music today.</p>
-    </section>
+    </div>
   </body>
 
   <script src="./life.js"></script>
