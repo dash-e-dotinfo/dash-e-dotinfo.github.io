@@ -1,147 +1,156 @@
 <!doctype html>
 <html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 
-    <style>
-      body {
-        background: black;
-        color: #ffffff;
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 
-        font-family: helvetica;
-        letter-spacing: 0.05rem;
-        font-size: 1rem;
-        word-break: normal;
-        text-align: left;
-        overflow: auto;
-      }
+  <style>
+    body {
+      background: rgb(153, 66, 0);
+      color: rgb(255, 255, 255);
 
-      #content {
-        margin: 1rem;
-      }
+      font-family: helvetica;
+      letter-spacing: 0.05rem;
+      font-size: 1rem;
+      word-break: normal;
+      text-align: left;
+      overflow: auto;
+    }
 
-      a:link {
-        color: rgb(0, 145, 255);
-        background-color: transparent;
-        text-decoration: none;
-      }
-      a:visited {
-        color: rgb(255, 217, 0);
-        background-color: transparent;
-        text-decoration: none;
-      }
-      a:hover {
-        color: rgb(0, 255, 13);
-        background-color: transparent;
-        text-decoration: underline;
-      }
-      a:active {
-        color: yellow;
-        background-color: transparent;
-        text-decoration: underline;
-      }
+    #content {
+      margin: 1rem;
+    }
 
-      mark {
-        background-color: #96ff00;
-        color: black;
-      }
+    a:link {
+      color: rgb(0, 145, 255);
+      background-color: transparent;
+      text-decoration: none;
+    }
 
-      h1,
-      h3 {
-        color: white;
-        background-color: black;
-        width: max-content;
-      }
+    a:visited {
+      color: rgb(255, 217, 0);
+      background-color: transparent;
+      text-decoration: none;
+    }
 
-      p {
-        color: white;
-        background-color: black;
+    a:hover {
+      color: rgb(0, 255, 13);
+      background-color: transparent;
+      text-decoration: underline;
+    }
 
-        margin: 0;
-        width: max-content;
-      }
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
 
-      canvas {
-        position: fixed;
-        z-index: -1;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        overflow: hidden;
-        pointer-events: none;
-      }
-    </style>
-  </head>
+    mark {
+      background-color: #96ff00;
+      color: black;
+    }
 
-  <body>
-    <div id="content">
-      <h1>Dasha</h1>
-      <h3><i>crhunchy video and sound</i></h3>
-      <p>painters tape</p>
-      <p>field mic</p>
-      <p>through the vanishing point</p>
-      <p>preserved flowers</p>
-      <p>milkytracker</p>
-      <p><a href="https://www.instagram.com/cane.yo/?hl=en">oil painting</a></p>
-      <p><a href="https://bijijoo.com/">brain damage</a></p>
-      <p>hand painted and circuit bent</p>
-      <p>seminar to contemporary ethics</p>
-      <p>seminar: dying democracies</p>
-      <p>seminar: 19th century continental</p>
-      <p>google drive</p>
-      <p>
-        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
-          >game of life</a
-        >
-      </p>
-      <p>cathode ray tube</p>
-      <p>analogic oscillation</p>
-      <p>lowpass</p>
-      <p>rollercoaster tycoon</p>
-      <p>conspicously huming</p>
-      <p>refrigerator</p>
-      <p>chartwell a4 student graph pad</p>
-      <p>
-        <a href="https://www.instagram.com/p/C02zXRsJQRi/?hl=en&img_index=2"
-          >reusable bag</a
-        >
-      </p>
-      <p>tattoo pattern</p>
-      <p>
-        <a href="https://en.wikipedia.org/wiki/Carrington_Event"
-          >deadly starlight</a
-        >
-      </p>
-      <p>pen collection</p>
-      <p>
-        <a href="https://oimo.io/works/life/">cosmos</a>
-      </p>
-      <p>aldo leopold</p>
-      <p>
-        <a href="https://www.benjaminbjorklund.com/">dog photo</a>
-      </p>
-      <p>silver camera</p>
-      <p>
-        <a href="http://www.instagram.com/da_jojin_da/?hl=en">darning socks</a>
-      </p>
-      <p>wool nylon blend thread</p>
-      <br />
-      <p style="font-size: 14px">
-        E-Mail: <i>mcdashstegg</i> [at] <i>gmail</i> [dot] <i>com</i>
-        <br />
-        <br />
-        Upcoming: Pique - Fall Edition
-      </p>
+    h1,
+    h3 {
+      color: rgb(255, 255, 255);
+      background-color: rgb(104, 0, 104);
+      width: max-content;
+    }
+
+    p {
+      color: rgb(255, 255, 255);
+      background-color: rgb(104, 0, 104);
+
+      margin: 0;
+      width: max-content;
+    }
+
+    canvas {
+      position: fixed;
+      z-index: -1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Dasha</h1>
+    <h3><i>crhunchy video and sound</i></h3>
+    <p>painters tape</p>
+    <p>field mic</p>
+    <p>through the vanishing point</p>
+    <p>preserved flowers</p>
+    <p>milkytracker</p>
+    <p><a href="https://www.instagram.com/cane.yo/?hl=en">oil painting</a></p>
+    <p><a href="https://bijijoo.com/">brain damage</a></p>
+    <p>hand painted and circuit bent</p>
+    <p>seminar to contemporary ethics</p>
+    <p>seminar: dying democracies</p>
+    <p>seminar: 19th century continental</p>
+    <p>google drive</p>
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">game of life</a>
+    </p>
+    <p>cathode ray tube</p>
+    <p>analogic oscillation</p>
+    <p>lowpass</p>
+    <p>rollercoaster tycoon</p>
+    <p>conspicously huming</p>
+    <p>refrigerator</p>
+    <p>chartwell a4 student graph pad</p>
+    <p>
+      <a href="https://www.instagram.com/p/C02zXRsJQRi/?hl=en&img_index=2">reusable bag</a>
+    </p>
+    <p>tattoo pattern</p>
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Carrington_Event">deadly starlight</a>
+    </p>
+    <p>pen collection</p>
+    <p>
+      <a href="https://oimo.io/works/life/">cosmos</a>
+    </p>
+    <p>aldo leopold</p>
+    <p>
+      <a href="https://www.benjaminbjorklund.com/">dog photo</a>
+    </p>
+    <p>silver camera</p>
+    <p>
+      <a href="http://www.instagram.com/da_jojin_da/?hl=en">darning socks</a>
+    </p>
+    <p>wool nylon blend thread</p>
+    <br />
+    <p style="font-size: 14px">
+      E-Mail: <i>mcdashstegg</i> [at] <i>gmail</i> [dot] <i>com</i>
       <br />
       <br />
+      <iframe width="300" height="225" src="https://www.youtube.com/embed/kfbdDphSkYU?si=LeEPFKEFpPVmG9HW"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <p>Do not forget to find music today.</p>
-    </div>
-  </body>
+    <p> I'd Like To Be A Floating Square [above]</p>
+    <br />
+    <br />
+    <p>Pique - Fall Edition [below]</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cCsTipKqIdg?si=bOjvMcOxP0-I1mV2"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>The conspicuous hum of the refrigerator.</p>
+  </div>
+</body>
 
-  <script src="./life.js"></script>
+<script src="./life.js"></script>
+
 </html>
