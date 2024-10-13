@@ -49,8 +49,10 @@ function draw() {
 
       // Convert cell value to get black (0) for alive or white (255 (white) for dead
       colorMode(RGB, 255)
+      stroke(255, 0, 0)
+      fill(196, 153, 78)
+
       if (cell == 1) {
-        fill(150, 255, 0)
         rect(
           column * cellSize,
           row * cellSize,
