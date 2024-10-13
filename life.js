@@ -48,11 +48,17 @@ function draw() {
       let cell = currentCells[column][row]
 
       // Convert cell value to get black (0) for alive or white (255 (white) for dead
+<<<<<<< HEAD
       colorMode(RGB, 255)
       stroke(255, 0, 0)
       fill(196, 153, 78)
 
       if (cell == 1) {
+=======
+      colorMode(RGB, 173, 18, 4)
+      if (cell == 1) {
+        fill(RGB, 173, 18, 4)
+>>>>>>> b7e2cc49e5095cdc07840871d19add5b8f9e8fea
         rect(
           column * cellSize,
           row * cellSize,
